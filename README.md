@@ -4,9 +4,15 @@ This repository provides evaluation code for **GUIGuard-Bench**, a cross-platfor
 
 GUI agents operate directly on screenshots and interface trajectories. This creates a privacy challenge: screenshots may contain sensitive personal information, and the privacy risk of a GUI workflow often depends on sequential context rather than a single isolated image. GUIGuard-Bench supports evaluation of privacy recognition, protected-screen task execution, and click grounding under visual protection.
 
-## Anonymous Review Notice
+## Paper and Resources
 
-This repository is prepared for double-blind review. It intentionally avoids author names, affiliations, organization names, internal paths, private service endpoints, and API keys. Please do not add identifying information to issues, logs, examples, configs, or output files during review.
+**GUIGuard-Bench: Toward a General Evaluation for Privacy-Preserving GUI Agents**
+
+Yanxi Wang, Zhiling Zhang, Wenbo Zhou, Weiming Zhang, Jie Zhang, Qiannan Zhu, Yu Shi, Shuxin Zheng, and Jiyan He.
+
+- [Paper (arXiv)](https://arxiv.org/abs/2601.18842)
+- [Project page](https://futuresis.github.io/GUIGuard-page/)
+- [Public dataset](https://huggingface.co/datasets/ShaofantuoshuzhengzhiSha/GUIGuard-Bench)
 
 ## Benchmark Overview
 
@@ -26,7 +32,7 @@ The dataset is hosted at:
 https://huggingface.co/datasets/ShaofantuoshuzhengzhiSha/GUIGuard-Bench
 ```
 
-The dataset page lists the dataset license as MIT.
+All dataset files, including the example data in this repository, are licensed under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/).
 
 ## Repository Layout
 
@@ -96,8 +102,8 @@ See [`grounding_eval/README.md`](grounding_eval/README.md) for package-specific 
 Clone the repository and install the evaluation packages in editable mode:
 
 ```bash
-git clone <repository-url>
-cd GUIGaurd-Bench
+git clone https://github.com/shaluoyan523/GUIGuard-Bench.git
+cd GUIGuard-Bench
 
 python -m pip install -e planner_eval
 python -m pip install -e privacy_recognition
@@ -360,8 +366,20 @@ Supported coordinate modes:
 
 ## Citation
 
-Citation metadata is intentionally omitted in this anonymous-review version. If this work is accepted or the review policy allows de-anonymization, replace this section with the final citation.
+If you use GUIGuard-Bench in your research, please cite:
+
+```bibtex
+@misc{wang2026guiguardbench,
+  title = {{GUIGuard-Bench}: Toward a General Evaluation for Privacy-Preserving {GUI} Agents},
+  author = {Wang, Yanxi and Zhang, Zhiling and Zhou, Wenbo and Zhang, Weiming and Zhang, Jie and Zhu, Qiannan and Shi, Yu and Zheng, Shuxin and He, Jiyan},
+  year = {2026},
+  eprint = {2601.18842},
+  archivePrefix = {arXiv},
+  url = {https://arxiv.org/abs/2601.18842}
+}
+```
 
 ## License
 
-The dataset page lists the dataset license as MIT. Check the dataset repository and individual files for the latest license and usage terms.
+- **Code:** [MIT License](https://opensource.org/license/mit).
+- **Data:** [Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)](https://creativecommons.org/licenses/by-nc/4.0/). This applies to all GUIGuard-Bench data, including the public dataset on Hugging Face and the example data in this repository. The MIT license for the code does not apply to the data.
